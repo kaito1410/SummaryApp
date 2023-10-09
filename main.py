@@ -6,6 +6,7 @@ from instagrapi import Client
 from instagrapi.exceptions import LoginRequired
 from emailNotify import *
 
+# yes I know storing my password in plaintext in a python file is bad practice but this is a developer/throwaway account so whatever
 ACCOUNT_USERNAME = "SummaryAppTest"
 ACCOUNT_PASSWORD = "!854Jis"
 
@@ -84,7 +85,7 @@ def login_user(cl):
     Attempts to login to Instagram using either the provided session information
     or the provided username and password.
     """
-
+    # on the initial run, uncomment below to create a dump of the session credentials locally 
    # cl.login(ACCOUNT_USERNAME, ACCOUNT_PASSWORD)
    # cl.dump_settings("session.json")
 
